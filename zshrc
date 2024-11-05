@@ -31,7 +31,7 @@ source "$ZINIT_PLUGINS"/Aloxaf---fzf-tab/fzf-tab.plugin.zsh
 bindkey "^[[1;5A" history-beginning-search-backward
 bindkey "^[[1;5B" history-beginning-search-forward
 
-zinit cdreplay -q
+#zinit cdreplay -q
 
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
@@ -52,16 +52,15 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:*' fzf-preview 'ls --color $realpath'
 
-#alias cdi="zi"
-#alias cd="z"
+alias cd="z"
 alias l="eza"
 alias ls="eza"
 alias lt="eza --tree --level"
 alias ll="eza -lah --grid"
 alias hs="history | grep -i"
+alias mi=micro
 
 eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
