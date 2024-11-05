@@ -29,6 +29,13 @@ tar -xzf "fzf-$FZF_LATEST_VERSION-linux_amd64.tar.gz"
 sudo mv fzf /usr/bin/
 rm fzf-$FZF_LATEST_VERSION-linux_amd64.tar.gz
 
+info "Installing Homebrew"
+NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew analytics off
+
+info "Installing brew tools"
+brew install talosctl
+
 echo
 info "Installing additional themes"
 BTOP_THEME_DIR="$HOME/.config/btop/themes/"

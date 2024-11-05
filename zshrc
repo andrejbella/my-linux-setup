@@ -1,3 +1,5 @@
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -60,7 +62,15 @@ alias ll="eza -lah --grid"
 alias hs="history | grep -i"
 alias mi=micro
 
+alias k=kubectl
+alias t=talosctl
+alias k9=k9s
+
+
 eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
+
+PROJECTS_FOLDER=$HOME/projects
+PATH="$PATH:$PROJECTS_FOLDER/talos/"
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
