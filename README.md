@@ -1,2 +1,3 @@
-# my-linux-setup
-My linux configuration for work
+Setup of my linux environment
+
+* Run `setup.sh` on Ubuntu WSL

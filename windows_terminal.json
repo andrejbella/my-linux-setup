@@ -1,0 +1,148 @@
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions": 
+    [
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+w"
+        },
+        {
+            "command": 
+            {
+                "action": "copy",
+                "singleLine": false
+            },
+            "id": "User.copy.644BA8F2",
+            "keys": "ctrl+c"
+        },
+        {
+            "command": "paste",
+            "id": "User.paste",
+            "keys": "ctrl+v"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "id": "User.splitPane.A6751878",
+            "keys": "alt+shift+d"
+        },
+        {
+            "command": "find",
+            "id": "User.find",
+            "keys": "ctrl+shift+f"
+        },
+        {
+            "command": "closePane",
+            "id": "User.closePane",
+            "keys": "ctrl+shift+delete"
+        }
+    ],
+    "alwaysShowTabs": true,
+    "centerOnLaunch": true,
+    "copyFormatting": "none",
+    "copyOnSelect": false,
+    "defaultProfile": "{51855cb2-8cce-5362-8f54-464b92b32386}",
+    "newTabMenu": 
+    [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
+    "profiles": 
+    {
+        "defaults": 
+        {
+            "colorScheme": "One Half Dark",
+            "font": 
+            {
+                "face": "JetBrainsMonoNL Nerd Font"
+            },
+            "opacity": 98
+        },
+        "list": 
+        [
+            {
+                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": false,
+                "name": "Windows PowerShell"
+            },
+            {
+                "commandline": "%SystemRoot%\\System32\\cmd.exe",
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": false,
+                "name": "Command Prompt"
+            },
+            {
+                "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
+                "hidden": false,
+                "name": "Ubuntu",
+                "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc"
+            },
+            {
+                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+                "hidden": true,
+                "name": "Ubuntu",
+                "source": "Windows.Terminal.Wsl"
+            }
+        ]
+    },
+    "schemes": 
+    [
+        {
+            "background": "#232136",
+            "black": "#393552",
+            "blue": "#9CCFD8",
+            "brightBlack": "#817C9C",
+            "brightBlue": "#9CCFD8",
+            "brightCyan": "#EA9A97",
+            "brightGreen": "#3E8FB0",
+            "brightPurple": "#C4A7E7",
+            "brightRed": "#EB6F92",
+            "brightWhite": "#E0DEF4",
+            "brightYellow": "#F6C177",
+            "cursorColor": "#59546D",
+            "cyan": "#EA9A97",
+            "foreground": "#E0DEF4",
+            "green": "#3E8FB0",
+            "name": "rose-pine-moon",
+            "purple": "#C4A7E7",
+            "red": "#EB6F92",
+            "selectionBackground": "#312F44",
+            "white": "#E0DEF4",
+            "yellow": "#F6C177"
+        }
+    ],
+    "showTabsInTitlebar": true,
+    "themes": 
+    [
+        {
+            "name": "rose-pine-moon",
+            "tab": 
+            {
+                "background": "#232136FF",
+                "iconStyle": "default",
+                "showCloseButton": "always",
+                "unfocusedBackground": null
+            },
+            "tabRow": 
+            {
+                "background": "#393552FF",
+                "unfocusedBackground": "#908CAAFF"
+            },
+            "window": 
+            {
+                "applicationTheme": "dark",
+                "experimental.rainbowFrame": false,
+                "frame": null,
+                "unfocusedFrame": null,
+                "useMica": false
+            }
+        }
+    ]
+}
