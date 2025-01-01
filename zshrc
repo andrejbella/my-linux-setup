@@ -69,8 +69,10 @@ alias k9=k9s
 
 eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
+. <(flux completion zsh)
 
-PROJECTS_FOLDER=$HOME/projects
-PATH="$PATH:$PROJECTS_FOLDER/talos/"
+
+export TALOSCONFIG=~/.config/configs/talosconfig
+export KUBECONFIG=~/.config/configs/kubeconfig
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
