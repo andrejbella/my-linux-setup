@@ -67,6 +67,12 @@ alias t=talosctl
 alias k9=k9s
 
 
+alias gs="git status"
+alias gc="git commit"
+alias ga="git add"
+alias gp="git push"
+
+
 eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
 . <(flux completion zsh)
