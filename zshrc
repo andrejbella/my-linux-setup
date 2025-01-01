@@ -58,7 +58,7 @@ alias cd="z"
 alias l="eza"
 alias ls="eza"
 alias lt="eza --tree --level"
-alias ll="eza -lah --grid"
+alias ll="ls -la"
 alias hs="history | grep -i"
 alias mi=micro
 
@@ -80,5 +80,6 @@ eval "$(fzf --zsh)"
 
 export TALOSCONFIG=~/.config/configs/talosconfig
 export KUBECONFIG=~/.config/configs/kubeconfig
+export SOPS_AGE_KEY_FILE=~/keys/age/keys.txt
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
