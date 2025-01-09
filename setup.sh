@@ -25,7 +25,7 @@ NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Ho
 brew analytics off
 
 info "Installing brew tools"
-brew install talosctl fzf kubectx
+brew install talosctl fzf kubectx derailed/k9s/k9s
 
 echo
 info "Installing additional themes"
