@@ -61,5 +61,9 @@ echo
 info "Copying .zshrc to ~/"
 cp -f "$CURRENT_DIR/zshrc" "$HOME/.zshrc"
 
+echo
+info "Installing asdf plugins"
+asdf plugin-add kubectl https://github.com/asdf-community/asdf-kubectl.git
+
 chsh -s $(which zsh)
 
