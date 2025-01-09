@@ -20,21 +20,12 @@ if [ ! -d "$ZINIT_HOME" ]; then
 	git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
 
-echo
-info "Installing fzf"
-sudo rm -rf /usr/bin/fzf
-FZF_LATEST_VERSION=$(git ls-remote --tags --sort="v:refname" "https://github.com/junegunn/fzf" | tail -n1 | sed -E 's/.*\/v?//; s/\^\{\}//')
-wget "https://github.com/junegunn/fzf/releases/download/v$FZF_LATEST_VERSION/fzf-$FZF_LATEST_VERSION-linux_amd64.tar.gz"
-tar -xzf "fzf-$FZF_LATEST_VERSION-linux_amd64.tar.gz"
-sudo mv fzf /usr/bin/
-rm fzf-$FZF_LATEST_VERSION-linux_amd64.tar.gz
-
 info "Installing Homebrew"
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew analytics off
 
 info "Installing brew tools"
-brew install talosctl
+brew install talosctl fzf kubectx
 
 echo
 info "Installing additional themes"
