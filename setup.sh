@@ -11,7 +11,7 @@ info()
 
 echo
 info "Installing tools"
-sudo apt update -y && sudo apt install zsh git curl zoxide btop eza micro -y
+sudo apt update -y && sudo apt install zsh git curl zoxide btop eza micro gcc -y
 
 echo
 info "Installing zinit"
