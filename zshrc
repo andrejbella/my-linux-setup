@@ -1,5 +1,3 @@
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -23,17 +21,19 @@ zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
+zinit light asdf-vm/asdf
+
+source "$ZINIT_PLUGINS"/Aloxaf---fzf-tab/fzf-tab.plugin.zsh
+source "$ZINIT_PLUGINS"/asdf-vm---asdf/asdf.sh
+source "$ZINIT_PLUGINS"/asdf-vm---asdf/internal/completions/asdf.zsh
 
 # Load completions
 autoload -U compinit; compinit
-
-source "$ZINIT_PLUGINS"/Aloxaf---fzf-tab/fzf-tab.plugin.zsh
 
 # Use arrow keys to cycle through autosuggestions history
 bindkey "^[[1;5A" history-beginning-search-backward
 bindkey "^[[1;5B" history-beginning-search-forward
 
-#zinit cdreplay -q
 
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
@@ -66,13 +66,13 @@ alias k=kubectl
 alias t=talosctl
 alias k9=k9s
 
-
 alias gs="git status"
 alias gc="git commit"
 alias ga="git add"
 alias gp="git push"
 
 
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
 . <(flux completion zsh)
