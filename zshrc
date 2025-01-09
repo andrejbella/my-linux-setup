@@ -27,8 +27,6 @@ source "$ZINIT_PLUGINS"/Aloxaf---fzf-tab/fzf-tab.plugin.zsh
 source "$ZINIT_PLUGINS"/asdf-vm---asdf/asdf.sh
 source "$ZINIT_PLUGINS"/asdf-vm---asdf/internal/completions/asdf.zsh
 
-# Load completions
-autoload -U compinit; compinit
 
 # Use arrow keys to cycle through autosuggestions history
 bindkey "^[[1;5A" history-beginning-search-backward
@@ -77,6 +75,8 @@ eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
 . <(flux completion zsh)
 
+# Load completions
+autoload -U compinit; compinit
 
 export TALOSCONFIG=~/.config/configs/talosconfig
 export KUBECONFIG=~/.config/configs/kubeconfig
